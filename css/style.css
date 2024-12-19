@@ -1,0 +1,72 @@
+body {
+    background-color: #0078FF;
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Conteneur pour le titre et les informations */
+#header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Style pour le titre principal */
+#header h1 {
+    font-family: 'Faster One', cursive;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    margin: 0;
+    color: rgb(0, 0, 0);
+}
+
+/* Style pour les informations secondaires */
+#header h2 {
+    font-size: 1.2em;
+    font-weight: normal;
+    color: rgb(0, 0, 0);
+    margin: 10px 0;
+}
+
+/* Conteneur principal des cartes */
+#container {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 150px;
+}
+
+/* Style des cartes */
+.card {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    border: 2px solid #0078FF;
+}
+
+/* Style pour les noms des membres */
+.card h3 {
+    font-family: 'Faster One', cursive;
+    font-size: 1.5em;
+    margin: 0;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+/* Liste des informations dans la carte */
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.card ul li {
+    margin: 5px 0;
+}
