@@ -10,63 +10,144 @@ body {
 /* Conteneur pour le titre et les informations */
 #header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
 }
 
 /* Style pour le titre principal */
 #header h1 {
     font-family: 'Faster One', cursive;
     text-transform: uppercase;
-    font-size: 2.5em;
+    font-size: 2.5rem;
     margin: 0;
     color: rgb(0, 0, 0);
 }
 
 /* Style pour les informations secondaires */
 #header h2 {
-    font-size: 1.2em;
+    font-size: 2.5rem;
     font-weight: normal;
     color: rgb(0, 0, 0);
-    margin: 10px 0;
+    margin: 1vh 0;
+}
+
+#header h2 strong {
+    font-weight: bold;
 }
 
 /* Conteneur principal des cartes */
 #container {
-    padding: 20px;
+    padding: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 150px;
+    gap: 4rem;
 }
 
 /* Style des cartes */
 .card {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     color: black;
-    border-radius: 10px;
-    padding: 20px;
-    width: 250px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    width: 25%;
+    height: auto;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
     text-align: left;
-    border: 2px solid #0078FF;
+    border: 0.2rem solid #0078FF;
 }
 
-/* Style pour les noms des membres */
 .card h3 {
     font-family: 'Faster One', cursive;
-    font-size: 1.5em;
+    font-size: 2rem;
     margin: 0;
     text-transform: uppercase;
     color: #000000;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 /* Liste des informations dans la carte */
 .card ul {
     list-style: none;
     padding: 0;
-    margin: 10px 0;
+    margin: 1rem 0;
 }
 
-.card ul li {
-    margin: 5px 0;
+.card ul > li {
+    margin-bottom: 1rem;
+}
+
+.card ul ul {
+    list-style-type: circle;
+    padding-left: 2.5rem;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+
+/* Pour les écrans de tablette (1024px ou moins) */
+@media (max-width: 1024px) {
+    .card {
+        width: 40%;
+    }
+
+    #header h1 {
+        font-size: 2rem;
+    }
+
+    #header h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Pour les écrans de téléphone (768px ou moins) */
+@media (max-width: 768px) {
+    #container {
+        gap: 2rem;
+    }
+
+    .card {
+        width: 80%;
+        padding: 1rem;
+    }
+
+    #header h1 {
+        font-size: 1.8rem;
+    }
+
+    #header h2 {
+        font-size: 1.5rem;
+    }
+
+    .card h3 {
+        font-size: 1.5rem;
+    }
+
+    .card ul ul {
+        padding-left: 1.5rem;
+    }
+}
+
+/* Pour les écrans très petits (480px ou moins) */
+@media (max-width: 480px) {
+    #header h1 {
+        font-size: 1.5rem;
+    }
+
+    #header h2 {
+        font-size: 1.2rem;
+    }
+
+    .card {
+        width: 90%;
+        padding: 0.8rem;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+
+    .card ul ul {
+        padding-left: 1rem;
+    }
 }
